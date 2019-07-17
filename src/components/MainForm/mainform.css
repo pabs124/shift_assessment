@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 5% 0%;
+}
+
+.myForm {
+  align-items: center;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.title {
+  color: darkblue;
+}
+
+.textInput {
+  display: flex;
+  justify-content: center;
+}
