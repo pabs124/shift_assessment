@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./mainform.css";
 import QuestionBox from "../QuestionBox/QuestionBox";
 import Button from "@material-ui/core/Button";
+import axios from "axios";
 
 export default class MainForm extends Component {
   constructor(props) {
@@ -122,6 +123,17 @@ export default class MainForm extends Component {
       questionsMarked: 0,
       email: ""
     };
+    axios
+      .post("/", {
+        email: this.state.email,
+        specificAnswers: specificAnswers
+      })
+      .then(function(response) {
+        console.log(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
   }
   handleChange(evt) {
     this.setState({
